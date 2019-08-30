@@ -1,0 +1,28 @@
+SELECT 
+  t1.student_id 
+FROM
+  (SELECT 
+    student_id,
+    num 
+  FROM
+    score 
+  WHERE course_id = 
+    (SELECT 
+      cid 
+    FROM
+      course 
+    WHERE cname = '物理')) AS t1 
+  INNER JOIN 
+    (SELECT 
+      student_id,
+      num 
+    FROM
+      score 
+    WHERE course_id = 
+      (SELECT 
+        cid 
+      FROM
+        course 
+      WHERE cname = '生物')) AS t2 
+    ON t1.student_id = t2.student_id 
+WHERE t1.num > t2.num ;

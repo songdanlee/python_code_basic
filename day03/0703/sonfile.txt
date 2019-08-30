@@ -1,0 +1,7 @@
+Today I'd like to introduce two queues, one is deque.
+Two-way queue, another one is Queue, one-way queue.
+The queue is different from the stack. The queue is first in first out.
+It's important to note that the two-way team
+Listed as a class in the collections module,
+python and Queue are classes in queue module. Don't be disturbed by the title of my blog.
+Let's start with the python bidirectional object deque
